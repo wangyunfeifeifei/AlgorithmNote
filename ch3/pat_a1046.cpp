@@ -4,13 +4,11 @@ int main() {
     int N;
     int dis[100005]; // 1-n distance
     int M;
-    long long int sum=0;
     scanf("%d", &N);
     dis[1]=0;
     for(int i=2;i<=N+1;i++) {
         int t;
         scanf("%d", &t);
-        sum+=dis[i];
         dis[i]=dis[i-1]+t;
     }
     scanf("%d", &M);
