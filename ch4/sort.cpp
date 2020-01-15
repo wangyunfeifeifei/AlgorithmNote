@@ -1,4 +1,5 @@
 #include<cstdio>
+#include<string.h>
 
 void selectSort(int A[], int n) {
     for(int i=0; i<=n; i++) {
