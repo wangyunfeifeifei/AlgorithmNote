@@ -1,19 +1,22 @@
 #include<cstdio>
 
 int main() {
-    bool flag=true;
     int a, b;
-    do{
-        scanf("%d%d", &a, &b);
-        if(b!=0) {
-            if (flag) {
-                printf("%d %d", a*b, b-1);
-                flag = false;
-            } else {
-                printf(" %d %d", a*b, b-1);
+    bool flag=true;
+    int cnt = 0;
+    while(scanf("%d%d", &a, &b)!=EOF) {
+        if(b==0)continue;
+        else {
+            if(flag){
+                flag=false;
+            }else{
+                printf(" ");
             }
+            printf("%d %d", a*b, b-1);
+            cnt++;
         }
-    }while(b!=0);
+    }
+    if(cnt==0)printf("0 0");
     printf("\n");
     return 0;
 }
